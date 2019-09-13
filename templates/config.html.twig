@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		    <meta name="description" content="">
+		    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        
+		    <meta name="generator" content="Jekyll v3.8.5">
+        <title>{% block title %}Webservice config{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        {% endblock %}
+    </head>
+    <body>
+
+      {% block body %}
+        <div class="container">
+
+          <h1 class="h3 mb-3 font-weight-normal">Fill in your credentials</h1>
+          {{ form(form) }}
+
+          {% for message in app.flashes('error') %}
+            <div class="alert alert-error">
+                {{ message }}
+            </div>
+          {% endfor %}
+
+        </div>
+      {% endblock %}
+      {% block javascripts %}{% endblock %}
+    </body>
+</html>
